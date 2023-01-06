@@ -1,0 +1,445 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "debugMode" : false,
+    "externalId" : null,
+    "firstRuleNodeId" : null,
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "08205750-8c46-11ed-8698-c9eb4b4a835a"
+    },
+    "name" : "Farm Emulation",
+    "root" : false,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 2,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 13,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 15,
+      "toIndex" : 1,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : null,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 46,
+        "layoutY" : 75
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 1,
+        "jsScript" : "//var lastupdatetime =  new Date().toLocaleString(\"en-GB\", {timeStyle:\"medium\", dateStyle:\"short\", timeZone: \"Africa/Gaborone\"});\nvar lastupdatetime =  Date.now();\nvar msg = { \n    temp: 42,\n    humidity: 77,\n    lastUpdateTime: lastupdatetime\n};\n\n\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "fdb4ccb0-8c45-11ed-8698-c9eb4b4a835a",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "5c8e1c50-8c46-11ed-8698-c9eb4b4a835a"
+      },
+      "name" : "Test",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 857,
+        "layoutY" : 472
+      },
+      "configuration" : {
+        "ruleChainId" : "6aa6b1c0-8c38-11ed-8698-c9eb4b4a835a"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "5c8e6a70-8c46-11ed-8698-c9eb4b4a835a"
+      },
+      "name" : "Root Rule Chain",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 57,
+        "layoutY" : 230
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 300,
+        "jsScript" : "var lastupdatetime =  Date.now();\n\n/* \nSoil Temp range 18-24°C\nSoil Moisture 70-80%\nSoil Conductivity 1.1 - 2.2 mS/cm (milliSiemens per centimeter) \n*/\n\nvar msg = { \n    soil_temperature: 18 + Math.random()*6,\n    soil_moisture: 70 + Math.random()*10,\n    soil_conductivity: 1.0 + Math.random()*1.2,\n    lastUpdateTime: lastupdatetime\n};\n\n\nvar metadata = { deviceType: \"Smart-Soil-Moisture-Sensor\"};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "b83020a0-8c44-11ed-8698-c9eb4b4a835a",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "84ebdfc0-8c4b-11ed-8698-c9eb4b4a835a"
+      },
+      "name" : "Soil Moisture Sensor",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 59,
+        "layoutY" : 277
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 300,
+        "jsScript" : "var lastupdatetime =  Date.now();\n\n/* Units in mg/kg\nNitrogen range 18-24°C\nPhosphorus Moisture 70-80%\nPotassium 1.1 - 2.2 mS/cm (milliSiemens per centimeter) \n*/\n\nvar msg = { \n    soil_nitrogen: 32,\n    soil_phosphorus: 37,\n    soil_potassium: 48,\n    lastUpdateTime: lastupdatetime\n};\n\n\nvar metadata = { deviceType: \"Smart-Soil-NPK-Sensor\"};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "c6087060-8c44-11ed-8698-c9eb4b4a835a",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "84ec06d0-8c4b-11ed-8698-c9eb4b4a835a"
+      },
+      "name" : "Soil NPK Sensor",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 59,
+        "layoutY" : 324
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 300,
+        "jsScript" : "var lastupdatetime =  Date.now();\n\n/* \nSoil pH range 6-7  \n*/\n\nvar msg = { \n    soil_pH: 5 + Math.round(Math.random()*2),\n    lastUpdateTime: lastupdatetime\n};\n\n\nvar metadata = { deviceType: \"Smart-Soil-pH-Sensor\"};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "e1aba260-8c44-11ed-8698-c9eb4b4a835a",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "84ec2de0-8c4b-11ed-8698-c9eb4b4a835a"
+      },
+      "name" : "Soil pH Sensor",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 60,
+        "layoutY" : 487
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 300,
+        "jsScript" : "var lastupdatetime =  Date.now();\n\n/* \nWater Smart-Water-ValveOpen or closed  \n*/\n\nvar msg = { \n    valve_open_status: Math.round(Math.random()),\n    lastUpdateTime: lastupdatetime\n};\n\n\nvar metadata = { deviceType: \"Smart-Water-Valve\"};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "756f5a10-8c44-11ed-8698-c9eb4b4a835a",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "84ec54f0-8c4b-11ed-8698-c9eb4b4a835a"
+      },
+      "name" : "Water Valve",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 59,
+        "layoutY" : 440
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 300,
+        "jsScript" : "var lastupdatetime =  Date.now();\n\n/* \nWater level  \n*/\n\nvar msg = { \n    water_level: 70 + Math.random()*30,\n    lastUpdateTime: lastupdatetime\n};\n\n\nvar metadata = { deviceType: \"Smart-Water-Level-Sensor\"};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "67774d50-8c44-11ed-8698-c9eb4b4a835a",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "84ec54f1-8c4b-11ed-8698-c9eb4b4a835a"
+      },
+      "name" : "Water Level Sensor",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 61,
+        "layoutY" : 534
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 300,
+        "jsScript" : "var lastupdatetime =  Date.now();\n\n/* Water Flow\nflow rate \ntotal-flow \n\n*/\n\nvar msg = { \n    flow_rate: 20,\n    total_flow: 40,\n    lastUpdateTime: lastupdatetime\n};\n\n\nvar metadata = { deviceType: \"Smart-Water-Flow-Sensor\"};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "8499a540-8c44-11ed-8698-c9eb4b4a835a",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "5dd43a70-8c52-11ed-8698-c9eb4b4a835a"
+      },
+      "name" : "Water Flow Sensor",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 66,
+        "layoutY" : 974
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 300,
+        "jsScript" : "var lastupdatetime =  Date.now();\n\n/* Weather Parameters\nair_temperature\nair_humidity\nwind_speed (m/s)\nwind_direction (°)\nrainfall (mm)\n*/\n\nvar msg = { \n    air_temperature: 20 + Math.random()*10,\n    air_humidity: 70,\n    wind_speed: 5,\n    wind_direction: 0 + Math.random()*360,\n    rainfall: 2,\n    lastUpdateTime: lastupdatetime\n};\n\n\nvar metadata = { deviceType: \"Smart-Weather-Station\"};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "0d9de3f0-8c5a-11ed-8698-c9eb4b4a835a",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "0dfa1c70-8c54-11ed-8698-c9eb4b4a835a"
+      },
+      "name" : "Automated Weather Station",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 57,
+        "layoutY" : 623
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 300,
+        "jsScript" : "var lastupdatetime =  Date.now();\n\n/* Rain Gauge\nrainfall (mm)\n*/\n\nvar msg = { \n    rainfall: 2,\n    lastUpdateTime: lastupdatetime\n};\n\n\nvar metadata = { deviceType: \"Smart-Rain-Gauge\"};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "c1245590-8d99-11ed-8698-c9eb4b4a835a",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a21efae0-8d9b-11ed-8698-c9eb4b4a835a"
+      },
+      "name" : "Rain Gauge",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 58,
+        "layoutY" : 672
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 300,
+        "jsScript" : "var lastupdatetime =  Date.now();\n\n/* Weather Parameters\nair_temperature\nair_humidity\nwind_speed (m/s)\nwind_direction (°)\nrainfall (mm)\n*/\n\nvar msg = { \n    wind_speed: 5,\n    wind_direction: 0 + Math.random()*360,\n    lastUpdateTime: lastupdatetime\n};\n\n\nvar metadata = { deviceType: \"Smart-Anemometer\"};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "d5dcbf40-8d99-11ed-8698-c9eb4b4a835a",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a21f21f0-8d9b-11ed-8698-c9eb4b4a835a"
+      },
+      "name" : "Anemometer",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 59,
+        "layoutY" : 719
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 300,
+        "jsScript" : "var lastupdatetime =  Date.now();\n\n/* Weather Parameters\nco2 (ppm)\npm2.5 (µg/m3)\npm10 (µg/m3)\n*/\n\nvar msg = { \n    co2: 300 + Math.random()*100,\n    pm2_5: 400 + Math.random()*100,\n    pm10: 350 + Math.random()*100,\n    lastUpdateTime: lastupdatetime\n};\n\n\nvar metadata = { deviceType: \"Smart-Air-Quality-Sensor\"};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "043ba090-8d9a-11ed-8698-c9eb4b4a835a",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a21f21f1-8d9b-11ed-8698-c9eb4b4a835a"
+      },
+      "name" : "Air Quality Sensor",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 58,
+        "layoutY" : 766
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 300,
+        "jsScript" : "var lastupdatetime =  Date.now();\n\n/* Weather Parameters\nrain_detection \n*/\n\nvar msg = { \n    rain_detection: Math.round(Math.random()),\n    lastUpdateTime: lastupdatetime\n};\n\n\nvar metadata = { deviceType: \"Smart-Rain-Detection-Sensor\"};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "18bfdae0-8d9a-11ed-8698-c9eb4b4a835a",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a21f21f2-8d9b-11ed-8698-c9eb4b4a835a"
+      },
+      "name" : "Rain Detection Sensor",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 57,
+        "layoutY" : 813
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 300,
+        "jsScript" : "var lastupdatetime =  Date.now();\n\n/* Weather Parameters\nair_temperature\nair_humidity\nair_pressure (hPa = 100Pa)\nillumination (kLux)\n*/\n\nvar msg = { \n    air_temperature: 20 + Math.random()*10,\n    air_humidity: 70 + Math.random()*5,\n    air_pressure: 100 + Math.random()*50,\n    illumination: 1 + Math.random(),\n    lastUpdateTime: lastupdatetime\n};\n\n\nvar metadata = { deviceType: \"Smart-Environmental-Sensor\"};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "2ca34150-8d9a-11ed-8698-c9eb4b4a835a",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a21f4900-8d9b-11ed-8698-c9eb4b4a835a"
+      },
+      "name" : "Environmental Sensor",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 63,
+        "layoutY" : 907
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 300,
+        "jsScript" : "var lastupdatetime =  Date.now();\n\n/* Weather Parameters\npar  0 - 2500µmol/m2.s\n*/\n\nvar msg = { \n    par: 1000 + Math.random()*800,\n    lastUpdateTime: lastupdatetime\n};\n\n\nvar metadata = { deviceType: \"Smart-PAR-Sensor\"};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "60452e60-8d9a-11ed-8698-c9eb4b4a835a",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a21f4901-8d9b-11ed-8698-c9eb4b4a835a"
+      },
+      "name" : "PAR Sensor",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 59,
+        "layoutY" : 860
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 300,
+        "jsScript" : "var lastupdatetime =  Date.now();\n\n/* Weather Parameters\nsolar_radiation 0 - 2000 (W/m2)\n*/\n\nvar msg = { \n    solar_radiation: 500 + Math.random()*1000,\n    lastUpdateTime: lastupdatetime\n};\n\n\nvar metadata = { deviceType: \"Smart-Solar-Radiation-Sensor\"};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "3f4e4ed0-8d9a-11ed-8698-c9eb4b4a835a",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a21f7010-8d9b-11ed-8698-c9eb4b4a835a"
+      },
+      "name" : "Solar Radiation Sensor",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

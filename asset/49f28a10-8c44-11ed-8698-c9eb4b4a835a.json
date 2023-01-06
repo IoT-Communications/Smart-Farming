@@ -1,0 +1,108 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "49f28a10-8c44-11ed-8698-c9eb4b4a835a"
+    },
+    "label" : null,
+    "name" : "Weather",
+    "type" : "Farm-Operation"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "49f28a10-8c44-11ed-8698-c9eb4b4a835a"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "c1245590-8d99-11ed-8698-c9eb4b4a835a"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "49f28a10-8c44-11ed-8698-c9eb4b4a835a"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "d5dcbf40-8d99-11ed-8698-c9eb4b4a835a"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "49f28a10-8c44-11ed-8698-c9eb4b4a835a"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "043ba090-8d9a-11ed-8698-c9eb4b4a835a"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "49f28a10-8c44-11ed-8698-c9eb4b4a835a"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "18bfdae0-8d9a-11ed-8698-c9eb4b4a835a"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "49f28a10-8c44-11ed-8698-c9eb4b4a835a"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "2ca34150-8d9a-11ed-8698-c9eb4b4a835a"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "49f28a10-8c44-11ed-8698-c9eb4b4a835a"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "3f4e4ed0-8d9a-11ed-8698-c9eb4b4a835a"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "49f28a10-8c44-11ed-8698-c9eb4b4a835a"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "60452e60-8d9a-11ed-8698-c9eb4b4a835a"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

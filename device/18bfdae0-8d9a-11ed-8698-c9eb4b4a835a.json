@@ -1,0 +1,74 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "18b8d600-8d9a-11ed-8698-c9eb4b4a835a"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "18bfdae0-8d9a-11ed-8698-c9eb4b4a835a"
+    },
+    "label" : "Rain Detection",
+    "name" : "Rain Detection Sensor",
+    "softwareId" : null,
+    "type" : "Smart-Rain-Detection-Sensor"
+  },
+  "credentials" : {
+    "credentialsId" : "ExIKPanV8i3ESrRrgBjB",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "49f28a10-8c44-11ed-8698-c9eb4b4a835a"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "18bfdae0-8d9a-11ed-8698-c9eb4b4a835a"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1672993458061,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1672993458061,
+      "longValue" : 1672993458061,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}

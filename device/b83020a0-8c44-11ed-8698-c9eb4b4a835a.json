@@ -1,0 +1,82 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "b82683b0-8c44-11ed-8698-c9eb4b4a835a"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "b83020a0-8c44-11ed-8698-c9eb4b4a835a"
+    },
+    "label" : "Soil Moisture",
+    "name" : "Soil Moisture Sensor",
+    "softwareId" : null,
+    "type" : "Smart-Soil-Moisture-Sensor"
+  },
+  "credentials" : {
+    "credentialsId" : "6XKtPLV5f8PIp57r6GBS",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "39f69700-8c44-11ed-8698-c9eb4b4a835a"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "b83020a0-8c44-11ed-8698-c9eb4b4a835a"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1672846878061,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "imageURL",
+      "lastUpdateTs" : 1672860790317,
+      "longValue" : null,
+      "strValue" : "https://iotcomms.co.bw/api/SmartAgriculture/soil_moisture_sensor.jpeg"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1672846878061,
+      "longValue" : 1672846878061,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}

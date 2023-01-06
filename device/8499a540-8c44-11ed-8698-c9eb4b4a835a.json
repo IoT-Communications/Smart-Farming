@@ -1,0 +1,82 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "84907d80-8c44-11ed-8698-c9eb4b4a835a"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "8499a540-8c44-11ed-8698-c9eb4b4a835a"
+    },
+    "label" : "Water Flow",
+    "name" : "Water Flow Sensor",
+    "softwareId" : null,
+    "type" : "Smart-Water-Flow-Sensor"
+  },
+  "credentials" : {
+    "credentialsId" : "SvfuOKYZDr6zUihSwLZ0",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "43a1b7d0-8c44-11ed-8698-c9eb4b4a835a"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "8499a540-8c44-11ed-8698-c9eb4b4a835a"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1672846758061,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "imageURL",
+      "lastUpdateTs" : 1672869010697,
+      "longValue" : null,
+      "strValue" : "https://iotcomms.co.bw/api/SmartAgriculture/water_flow_sensor.png"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1672846758061,
+      "longValue" : 1672846758061,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}
