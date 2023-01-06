@@ -65,9 +65,9 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "imageURL",
-      "lastUpdateTs" : 1672868887810,
+      "lastUpdateTs" : 1673006956620,
       "longValue" : null,
-      "strValue" : "https://iotcomms.co.bw/api/SmartAgriculture/soil_npk_sensor.jpg"
+      "strValue" : "https://iotcomms.co.bw/api/SmartFarming/soil_npk_sensor.jpg"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,

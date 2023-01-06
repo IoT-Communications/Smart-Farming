@@ -64,6 +64,14 @@
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
+      "key" : "imageURL",
+      "lastUpdateTs" : 1673008433716,
+      "longValue" : null,
+      "strValue" : "https://iotcomms.co.bw/api/SmartFarming/anemometer.jpg"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
       "key" : "inactivityAlarmTime",
       "lastUpdateTs" : 1672993338061,
       "longValue" : 1672993338061,

@@ -19,6 +19,10 @@
   },
   "metaData" : {
     "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 7,
+      "type" : "Success"
+    }, {
       "fromIndex" : 2,
       "toIndex" : 0,
       "type" : "Post telemetry"
@@ -173,6 +177,25 @@
       "name" : "Device Profile Node",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.profile.TbDeviceProfileNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1159,
+        "layoutY" : 157
+      },
+      "configuration" : {
+        "ruleChainId" : "b0634880-8dbf-11ed-8698-c9eb4b4a835a"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "fcc34900-8dbf-11ed-8698-c9eb4b4a835a"
+      },
+      "name" : "Water Flow Delta",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
     } ],
     "ruleChainConnections" : null
   },

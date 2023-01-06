@@ -64,6 +64,14 @@
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
+      "key" : "imageURL",
+      "lastUpdateTs" : 1673006924505,
+      "longValue" : null,
+      "strValue" : "https://iotcomms.co.bw/api/SmartFarming/rain_gauge.png"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
       "key" : "inactivityAlarmTime",
       "lastUpdateTs" : 1672993338061,
       "longValue" : 1672993338061,

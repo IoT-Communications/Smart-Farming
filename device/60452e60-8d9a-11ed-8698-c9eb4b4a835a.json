@@ -64,6 +64,14 @@
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
+      "key" : "imageURL",
+      "lastUpdateTs" : 1673008021815,
+      "longValue" : null,
+      "strValue" : "https://iotcomms.co.bw/api/SmartFarming/par_sensor.jpg"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
       "key" : "inactivityAlarmTime",
       "lastUpdateTs" : 1672993578061,
       "longValue" : 1672993578061,

@@ -2384,7 +2384,7 @@
                 "label" : "delta",
                 "color" : "#2196f3",
                 "settings" : { },
-                "_hash" : 0.3417480822882617
+                "_hash" : 0.0355506246093753
               } ],
               "latestDataKeys" : [ ]
             } ],
@@ -2398,10 +2398,10 @@
                 "realtimeType" : 0,
                 "timewindowMs" : 86400000,
                 "quickInterval" : "CURRENT_DAY",
-                "interval" : 300000
+                "interval" : 7200000
               },
               "aggregation" : {
-                "type" : "NONE",
+                "type" : "SUM",
                 "limit" : 200
               }
             },
@@ -4140,29 +4140,46 @@
             "color" : "rgba(0, 0, 0, 0.87)",
             "padding" : "8px",
             "settings" : {
-              "shadowSize" : 4,
-              "fontColor" : "#545454",
+              "stack" : false,
               "fontSize" : 10,
+              "fontColor" : "#545454",
+              "showTooltip" : true,
+              "tooltipIndividual" : false,
+              "tooltipCumulative" : false,
+              "hideZeros" : false,
+              "tooltipValueFormatter" : "if (value == 1) {\n    return 'Raining';\n} else if (value === 0) {\n    return 'No Rain';\n} else {\n    return '';\n}",
+              "grid" : {
+                "verticalLines" : true,
+                "horizontalLines" : true,
+                "outlineWidth" : 1,
+                "color" : "#545454",
+                "backgroundColor" : null,
+                "tickColor" : "#DDDDDD"
+              },
               "xaxis" : {
+                "title" : null,
                 "showLabels" : true,
                 "color" : "#545454"
               },
               "yaxis" : {
+                "min" : 0,
+                "max" : 1,
+                "title" : null,
                 "showLabels" : true,
                 "color" : "#545454",
-                "ticksFormatter" : "if (value > 0 && value <= 1) {\n    return 'On';\n} else if (value === 0) {\n    return 'Off';\n} else {\n    return '';\n}"
+                "tickSize" : null,
+                "tickDecimals" : 0,
+                "ticksFormatter" : "if (value == 1) {\n    return 'Raining';\n} else if (value === 0) {\n    return 'No Rain';\n} else {\n    return '';\n}"
               },
-              "grid" : {
-                "color" : "#545454",
-                "tickColor" : "#DDDDDD",
-                "verticalLines" : true,
-                "horizontalLines" : true,
-                "outlineWidth" : 1
+              "shadowSize" : 4,
+              "smoothLines" : false,
+              "comparisonEnabled" : false,
+              "xaxisSecond" : {
+                "axisPosition" : "top",
+                "title" : null,
+                "showLabels" : true
               },
-              "stack" : false,
-              "tooltipIndividual" : false,
-              "tooltipValueFormatter" : "if (value > 0 && value <= 1) {\n    return 'On';\n} else if (value === 0) {\n    return 'Off';\n} else {\n    return '';\n}",
-              "smoothLines" : false
+              "customLegendEnabled" : false
             },
             "title" : "Rain Detection History",
             "dropShadow" : true,
@@ -4177,11 +4194,13 @@
             "actions" : { },
             "legendConfig" : {
               "direction" : "column",
-              ",position" : "bottom",
+              "position" : "bottom",
+              "sortDataKeys" : false,
               "showMin" : false,
               "showMax" : false,
               "showAvg" : false,
-              "showTotal" : false
+              "showTotal" : false,
+              "showLatest" : false
             },
             "displayTimewindow" : true,
             "showTitleIcon" : false,
@@ -4230,7 +4249,7 @@
             "padding" : "0px",
             "settings" : {
               "cardHtml" : "<img src=${imageURL} class=\"center\">",
-              "cardCss" : ".center {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100%;\n    height: 100%;\n}"
+              "cardCss" : ".center {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 75%;\n    height: 100%;\n}"
             },
             "title" : "Image",
             "dropShadow" : false,

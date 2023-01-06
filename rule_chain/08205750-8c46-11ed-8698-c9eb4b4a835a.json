@@ -39,7 +39,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 7,
-      "toIndex" : 1,
+      "toIndex" : 16,
       "type" : "Success"
     }, {
       "fromIndex" : 9,
@@ -67,6 +67,14 @@
       "type" : "Success"
     }, {
       "fromIndex" : 15,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 16,
+      "toIndex" : 17,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 17,
       "toIndex" : 1,
       "type" : "Success"
     } ],
@@ -97,8 +105,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 857,
-        "layoutY" : 472
+        "layoutX" : 1148,
+        "layoutY" : 448
       },
       "configuration" : {
         "ruleChainId" : "6aa6b1c0-8c38-11ed-8698-c9eb4b4a835a"
@@ -145,7 +153,7 @@
       "configuration" : {
         "msgCount" : 0,
         "periodInSeconds" : 300,
-        "jsScript" : "var lastupdatetime =  Date.now();\n\n/* Units in mg/kg\nNitrogen range 18-24°C\nPhosphorus Moisture 70-80%\nPotassium 1.1 - 2.2 mS/cm (milliSiemens per centimeter) \n*/\n\nvar msg = { \n    soil_nitrogen: 32,\n    soil_phosphorus: 37,\n    soil_potassium: 48,\n    lastUpdateTime: lastupdatetime\n};\n\n\nvar metadata = { deviceType: \"Smart-Soil-NPK-Sensor\"};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "jsScript" : "var lastupdatetime =  Date.now();\n\n/* Units in mg/kg\nNitrogen range 18-24°C\nPhosphorus Moisture 70-80%\nPotassium 1.1 - 2.2 mS/cm (milliSiemens per centimeter) \n*/\n\nvar msg = { \n    soil_nitrogen: 32 + Math.random()*10,\n    soil_phosphorus: 37 + Math.random()*10,\n    soil_potassium: 48 + Math.random()*10,\n    lastUpdateTime: lastupdatetime\n};\n\n\nvar metadata = { deviceType: \"Smart-Soil-NPK-Sensor\"};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "originatorId" : "c6087060-8c44-11ed-8698-c9eb4b4a835a",
         "originatorType" : "DEVICE"
       },
@@ -185,8 +193,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 60,
-        "layoutY" : 487
+        "layoutX" : 61,
+        "layoutY" : 457
       },
       "configuration" : {
         "msgCount" : 0,
@@ -208,8 +216,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 59,
-        "layoutY" : 440
+        "layoutX" : 60,
+        "layoutY" : 410
       },
       "configuration" : {
         "msgCount" : 0,
@@ -231,13 +239,13 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 61,
-        "layoutY" : 534
+        "layoutX" : 62,
+        "layoutY" : 504
       },
       "configuration" : {
         "msgCount" : 0,
         "periodInSeconds" : 300,
-        "jsScript" : "var lastupdatetime =  Date.now();\n\n/* Water Flow\nflow rate \ntotal-flow \n\n*/\n\nvar msg = { \n    flow_rate: 20,\n    total_flow: 40,\n    lastUpdateTime: lastupdatetime\n};\n\n\nvar metadata = { deviceType: \"Smart-Water-Flow-Sensor\"};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "jsScript" : "var lastupdatetime =  Date.now();\n\n/* Water Flow\nflow rate \ntotal-flow \n\n*/\n\nvar msg = { \n    flow_rate: 20 + Math.random()*5,\n    total_flow: 40,\n    lastUpdateTime: lastupdatetime\n};\n\n\nvar metadata = { deviceType: \"Smart-Water-Flow-Sensor\"};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "originatorId" : "8499a540-8c44-11ed-8698-c9eb4b4a835a",
         "originatorType" : "DEVICE"
       },
@@ -283,7 +291,7 @@
       "configuration" : {
         "msgCount" : 0,
         "periodInSeconds" : 300,
-        "jsScript" : "var lastupdatetime =  Date.now();\n\n/* Rain Gauge\nrainfall (mm)\n*/\n\nvar msg = { \n    rainfall: 2,\n    lastUpdateTime: lastupdatetime\n};\n\n\nvar metadata = { deviceType: \"Smart-Rain-Gauge\"};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "jsScript" : "var lastupdatetime =  Date.now();\n\n/* Rain Gauge\nrainfall (mm)\n*/\n\nvar msg = { \n    rainfall: 0 + Math.random()*4,\n    lastUpdateTime: lastupdatetime\n};\n\n\nvar metadata = { deviceType: \"Smart-Rain-Gauge\"};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "originatorId" : "c1245590-8d99-11ed-8698-c9eb4b4a835a",
         "originatorType" : "DEVICE"
       },
@@ -306,7 +314,7 @@
       "configuration" : {
         "msgCount" : 0,
         "periodInSeconds" : 300,
-        "jsScript" : "var lastupdatetime =  Date.now();\n\n/* Weather Parameters\nair_temperature\nair_humidity\nwind_speed (m/s)\nwind_direction (°)\nrainfall (mm)\n*/\n\nvar msg = { \n    wind_speed: 5,\n    wind_direction: 0 + Math.random()*360,\n    lastUpdateTime: lastupdatetime\n};\n\n\nvar metadata = { deviceType: \"Smart-Anemometer\"};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "jsScript" : "var lastupdatetime =  Date.now();\n\n/* Weather Parameters\nair_temperature\nair_humidity\nwind_speed (m/s)\nwind_direction (°)\nrainfall (mm)\n*/\n\nvar msg = { \n    wind_speed: 0 + Math.random()*10,\n    wind_direction: 0 + Math.random()*360,\n    lastUpdateTime: lastupdatetime\n};\n\n\nvar metadata = { deviceType: \"Smart-Anemometer\"};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "originatorId" : "d5dcbf40-8d99-11ed-8698-c9eb4b4a835a",
         "originatorType" : "DEVICE"
       },
@@ -435,6 +443,49 @@
       "name" : "Solar Radiation Sensor",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 316,
+        "layoutY" : 502
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ ],
+        "latestTsKeyNames" : [ "total_flow" ],
+        "getLatestValueWithTs" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "4c114c40-8dc1-11ed-8698-c9eb4b4a835a"
+      },
+      "name" : "Previous Flow",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 561,
+        "layoutY" : 497
+      },
+      "configuration" : {
+        "jsScript" : "msg.total_flow = parseFloat(metadata.total_flow) + 1;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "4c114c41-8dc1-11ed-8698-c9eb4b4a835a"
+      },
+      "name" : "Increment Total Flow",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     } ],
     "ruleChainConnections" : null
   },

@@ -65,9 +65,9 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "imageURL",
-      "lastUpdateTs" : 1672869934268,
+      "lastUpdateTs" : 1673007005222,
       "longValue" : null,
-      "strValue" : "https://iotcomms.co.bw/api/SmartAgriculture/smart_valve.jpg"
+      "strValue" : "https://iotcomms.co.bw/api/SmartFarming/smart_valve.jpg"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
