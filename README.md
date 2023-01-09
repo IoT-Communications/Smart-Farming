@@ -4,7 +4,7 @@ This is a Smart Farming solution that involves the use of Internet of Things (Io
 ## Solution Architecture
 ![System Architecture](https://iotcomms.co.bw/api/SmartFarming/SystemArchitecture.png)
 
-## Data Visulalization
+## Data Visualization
 ![Image](https://iotcomms.co.bw/api/SmartFarming/Dashboard.gif)
 
 ## Support
