@@ -8,7 +8,7 @@
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
-      "id" : "13814000-1dd2-11b2-8080-808080808080"
+      "id" : "d673e5b0-8f87-11ed-8698-c9eb4b4a835a"
     },
     "deviceData" : {
       "configuration" : {
@@ -65,9 +65,9 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "imageURL",
-      "lastUpdateTs" : 1673007492665,
+      "lastUpdateTs" : 1673012417877,
       "longValue" : null,
-      "strValue" : "https://iotcomms.co.bw/api/SmartFarming/rain_detection_sensor.png"
+      "strValue" : "https://iotcomms.co.bw/api/SmartFarming/rain_detection_sensor.jpg"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
@@ -75,6 +75,22 @@
       "key" : "inactivityAlarmTime",
       "lastUpdateTs" : 1672993458061,
       "longValue" : 1672993458061,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.7797936677339027,
+      "jsonValue" : null,
+      "key" : "xPos",
+      "lastUpdateTs" : 1673200266928,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.4439083232810615,
+      "jsonValue" : null,
+      "key" : "yPos",
+      "lastUpdateTs" : 1673200266928,
+      "longValue" : null,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ ]

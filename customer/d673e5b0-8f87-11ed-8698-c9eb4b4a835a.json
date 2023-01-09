@@ -1,0 +1,29 @@
+{
+  "entityType" : "CUSTOMER",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "",
+      "homeDashboardId" : null,
+      "homeDashboardHideToolbar" : true
+    },
+    "address" : null,
+    "address2" : null,
+    "city" : "Gaborone",
+    "country" : "Botswana",
+    "email" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "CUSTOMER",
+      "id" : "d673e5b0-8f87-11ed-8698-c9eb4b4a835a"
+    },
+    "name" : "Farmer",
+    "phone" : null,
+    "state" : null,
+    "title" : "Farmer",
+    "zip" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

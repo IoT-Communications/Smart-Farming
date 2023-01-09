@@ -8,7 +8,7 @@
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
-      "id" : "13814000-1dd2-11b2-8080-808080808080"
+      "id" : "d673e5b0-8f87-11ed-8698-c9eb4b4a835a"
     },
     "deviceData" : {
       "configuration" : {
@@ -75,6 +75,22 @@
       "key" : "inactivityAlarmTime",
       "lastUpdateTs" : 1672993458061,
       "longValue" : 1672993458061,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.13425638996228775,
+      "jsonValue" : null,
+      "key" : "xPos",
+      "lastUpdateTs" : 1673203680286,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.6018031001282282,
+      "jsonValue" : null,
+      "key" : "yPos",
+      "lastUpdateTs" : 1673203680286,
+      "longValue" : null,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ ]

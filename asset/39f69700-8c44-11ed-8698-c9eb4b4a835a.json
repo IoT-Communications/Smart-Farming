@@ -6,14 +6,14 @@
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
-      "id" : "13814000-1dd2-11b2-8080-808080808080"
+      "id" : "d673e5b0-8f87-11ed-8698-c9eb4b4a835a"
     },
     "externalId" : null,
     "id" : {
       "entityType" : "ASSET",
       "id" : "39f69700-8c44-11ed-8698-c9eb4b4a835a"
     },
-    "label" : null,
+    "label" : "",
     "name" : "Soil Quality",
     "type" : "Farm-Operation"
   },
@@ -55,6 +55,22 @@
     "typeGroup" : "COMMON"
   } ],
   "attributes" : {
-    "SERVER_SCOPE" : [ ]
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : 0.6114040750792789,
+      "jsonValue" : null,
+      "key" : "xPos",
+      "lastUpdateTs" : 1673189981755,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.7993108558955142,
+      "jsonValue" : null,
+      "key" : "yPos",
+      "lastUpdateTs" : 1673189981755,
+      "longValue" : null,
+      "strValue" : null
+    } ]
   }
 }

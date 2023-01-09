@@ -6,7 +6,7 @@
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
-      "id" : "13814000-1dd2-11b2-8080-808080808080"
+      "id" : "d673e5b0-8f87-11ed-8698-c9eb4b4a835a"
     },
     "externalId" : null,
     "id" : {
@@ -103,6 +103,22 @@
     "typeGroup" : "COMMON"
   } ],
   "attributes" : {
-    "SERVER_SCOPE" : [ ]
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : 0.17360369975097834,
+      "jsonValue" : null,
+      "key" : "xPos",
+      "lastUpdateTs" : 1673190228731,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.23307922864914946,
+      "jsonValue" : null,
+      "key" : "yPos",
+      "lastUpdateTs" : 1673190228731,
+      "longValue" : null,
+      "strValue" : null
+    } ]
   }
 }
